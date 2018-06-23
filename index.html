@@ -1,21 +1,101 @@
-<!IDOCOTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="~/assets/css/bootstap.min.css">
-  <link rel="stylesheet" href="~/assets/css/main.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstap-grid.min.css">
+  <link rel="stylesheet" href="assets/css/bootstap-reboot.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/main.scss">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 <body>
+  <!--header-->
+  <section id="header">
+    <header>
+      <span class="image icon">
+        <img src="https://www.gravatar.com/avatar/64a60d57580ee24667361e0aacc9f01c" alt>
+      </span>
+      <h1 id="logo">
+        kanade0404
+      </h1>
+    </header>
+    <nav id="nav">
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#blog">はてなBlog</a></li>
+        <li><a href="#twitter">Twitter</a></li>
+        <li><a href="#github">GitHub</a></li>
+      </ul>
+    </nav>
+    <div id="footer">
+      <ul class="icon">
+        <li><a href="https://twitter.com/py_kanade"><i class="fab fa-twitter fa-fw icon"></i>Twitter</a></li>
+        <li><a href="https://github.com/kanade0404"><i class="fab fa-github fa-fw icon"></i>GitHub</a></li>
+      </ul>
+    </div>
+  </section>
   <div class="container">
-    <h2>Hello! I'm かなで.</h2>
-    <p>Jobs:Software Engineer</p>
-    <p>Language:C#/Python/JavaScript/Java/SQL</p>
-    <p>Like:Anime/Pokemon/Programming/Machine Learning/Economics</p>
-  </div>
-  <div>
-    <a href='https://github.com/kanade0404'>GitHub</a>
-    <button href='https://twitter.com/py_kanade' class="custom-twitter-button btn-text">Twitter</button>
-    <a href='https://kana-kanade.hatenablog.com/'>はてなブログ</a>
-  </div>
+    <div id="wrapper">
+      <div id="main">
+        <section id="about">
+          <div class="container">
+            <header>
+              <h2>About me</h2>
+            </header>
+            <div>
+              <p>ソフトウェアエンジニアをやっています。
+                <br>
+              プログラミングは11月からはじめました。</p>
+              <h4>Language</h4>
+              <p>C#:仕事はこれなので一番使っている。
+                <br>
+                Python:一番好き(?)ですが仕事ではまだ使えていない・・・。
+                <br>
+                JavaScript:よく使うけどできればTypeScriptに乗り換えたい。
+                <br>
+                Java:初めてまともなアプリを作ったのはJava。Spring使ったことないですが。<p>
+              <h4>Like</h4>
+              <p>Anime:コードギアス、とらドラ、魔法少女まどか☆マギカ、アイカツ！、型月系、etc...
+                <br>
+                Pokemon:最近はやってないですがシングルとかダブル（どちらかと言うとダブル）が好きです。
+                <br>
+                Programming:本当か？？？
+                <br>
+                Economics:都市経済学が専門（）でしたが、最近では情報の非対称性や不完備情報ゲームなどにも興味があります。</p>
+            </div>
+          </div>
+        </section>
+        <section id="blog">
+          <div class="container">
+            <header>
+              <h2>はてなブログ</h2>
+            </header>
+            <a href='https://kana-kanade.hatenablog.com/'>はてなブログ</a>
+          </div>
+        </section>
+        <section id="twitter">
+          <div class="container">
+            <header>
+              <h2>twitter</h2>
+            </header>
+            <a href='https://twitter.com/py_kanade'><i class="fab fa-twitter"></i>Twitter</a>
+          </div>
+        </section>
+        <section id="github">
+          <div class="container">
+            <header>
+              <h2>GitHub</h2>
+            </header>
+            <a href='https://github.com/kanade0404'><i class="fab fa-github fa-fw icon"></i>GitHub</a>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="assets/js/bootstap.min.js"></script>
 </body>
 </html>
