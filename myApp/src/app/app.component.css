@@ -1,4 +1,4 @@
-html{
+/* html{
   margin: 0;
   padding: 0;
   border: 0;
@@ -65,7 +65,7 @@ a{
   position: fixed;
   text-align: center;
   top: 0;
-  right: 0;
+  left: 0;
 }
 #header > header .icon{
   display: block;
@@ -121,5 +121,5 @@ a{
   color: skyblue;
 }
 #wrapper{
-  padding-right: 16em;
-}
+  padding-left: 16em;
+} */
