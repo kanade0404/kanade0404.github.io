@@ -1,0 +1,233 @@
+$widthPC:1024px;
+$widthTab:768px;
+$widthSp:568px;
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+head {
+  display: none;
+}
+body {
+  color: #888;
+  font-style: Meiryo;
+  font-weight: 400;
+  line-height: 1.75em;
+  background: #fff;
+}
+footer {
+  padding: 1.5em;
+  display: block;
+}
+ul {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+  .icon{
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+    li{
+      display: inline-block;
+      padding: 0 1em 0;
+    }
+  }
+}
+
+li {
+  text-align: -webkit-match-parent;
+}
+a {
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.icon {
+  text-decoration: none;
+  border-bottom: none;
+  position: relative;
+  a{
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: aquamarine;
+  color: skyblue;
+  height: 100%;
+  width: 16em;
+  overflow-y: auto;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  right: 0;
+  header{
+    .icon{
+      display: block;
+      margin: 0 auto 2.25em auto;
+      width: 8em;
+    }
+  }
+  footer{
+    flex-shrink: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .icon{
+      margin: 0;
+      li{
+        a{
+          color: skyblue;
+        }
+      }
+    }
+  }
+}
+
+
+.image {
+  border: 0;
+  position: relative;
+  .icon{
+    border-radius: 100%;
+    overflow: hidden;
+    img{
+      border-radius: 100%;
+      display: block;
+      width: 100%;
+    }
+  }
+}
+#header{
+  nav{
+    flex-grow: 1;
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li{
+      a{
+        transition: none;
+        border: 0;
+        display: block;
+        padding: 0.85em 0;
+        text-decoration: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        .active{
+          background: #fff;
+          color: aquamarine !important;
+        }
+      }
+    }
+  }
+  footer{
+    .icon{
+      li{
+        a{
+          color: skyblue;
+        }
+      }
+    }
+  }
+}
+
+#wrapper {
+  padding-right: 16em;
+}
+
+.box14{
+  padding: 0.2em 0.5em;
+  margin: 2em 0;
+  background: #d6ebff;
+  box-shadow: 0px 0px 0px 10px #d6ebff;
+  border: dashed 2px white;
+  p{
+    margin: 0; 
+    padding: 0;
+  }
+}
+.list{
+  ul{
+    padding: 0;
+    position: relative;
+  }
+  li{
+    color: white;
+    background: #81d0cb;
+    line-height: 1.5;
+    padding: 0.5em 0.5em 0.5em 2em;
+    border-bottom: 2px solid white;
+    list-style-type: none!important;
+    font-weight: bold; /*好みで太字に*/
+  }
+  :before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f14a";
+    position: absolute;
+    left : 0.5em; /*左端からのアイコンまでの距離*/
+    color: white; /*アイコン色*/
+  }
+}
+
+
+#nav{
+  li{
+    margin: 5px;
+  }
+}
+.nav_button{
+  display: inline-block;
+  background-color: #26a69b;/*背景色*/
+  color: #FFF;/*文字色*/
+  font-size: 1em;/*文字サイズ*/
+  line-height: 1;
+  text-decoration: none;
+  letter-spacing: 0.05em;/*字間*/
+  padding: 0.2em 1em;/*ボタン内の余白*/
+  border-radius: 3px;/*角の丸み*/
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);/*影*/
+  -webkit-tap-highlight-color: transparent;
+  transition: .3s ease-out;/*変化を緩やかに*/
+  :hover{
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);/*浮き上がるように*/
+  }
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+  .rp-effect{
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.35;/*波紋の濃さ*/
+    transform: scale(0);
+    background: #FFF;/*波紋色*/
+    animation: ripple 700ms;
+    pointer-events: none; 
+  }
+}
+
+@-webkit-keyframes ripple {
+  to {
+    opacity: 0;
+    transform: scale(2.0);
+  }
+}
+
+@keyframes ripple {
+  to {
+    opacity: 0;
+    transform: scale(2.0);
+  }
+}
