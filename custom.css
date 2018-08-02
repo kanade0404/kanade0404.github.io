@@ -28,11 +28,11 @@ ul {
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
   -webkit-padding-start: 40px; }
-  ul .icon {
+  ul.icon {
     cursor: default;
     list-style: none;
     padding-left: 0; }
-    ul .icon li {
+    ul.icon li {
       display: inline-block;
       padding: 0 1em 0; }
 
@@ -46,7 +46,7 @@ a {
   text-decoration: none;
   border-bottom: none;
   position: relative; }
-  .icon a {
+  .icon > a {
     margin: 0;
     padding: 10px; }
 
@@ -63,48 +63,48 @@ a {
   text-align: center;
   top: 0;
   right: 0; }
-  #header header .icon {
+  #header > header .icon {
     display: block;
     margin: 0 auto 2.25em auto;
     width: 8em; }
-  #header footer {
+  #header > footer {
     flex-shrink: 0;
     bottom: 0;
     left: 0;
     width: 100%; }
-    #header footer .icon {
+    #header > footer .icon {
       margin: 0; }
-      #header footer .icon li a {
+      #header > footer .icon li a {
         color: skyblue; }
 
 .image {
   border: 0;
   position: relative; }
-  .image .icon {
+  .image.icon {
     border-radius: 100%;
     overflow: hidden; }
-    .image .icon img {
+    .image.icon img {
       border-radius: 100%;
       display: block;
       width: 100%; }
 
-#header nav {
+#header > nav {
   flex-grow: 1; }
-  #header nav ul {
+  #header > nav ul {
     list-style: none;
     margin: 0;
     padding: 0; }
-  #header nav li a {
+  #header > nav li a {
     transition: none;
     border: 0;
     display: block;
     padding: 0.85em 0;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-    #header nav li a .active {
-      background: #fff;
-      color: aquamarine !important; }
-#header footer .icon li a {
+  #header > nav ul li a.active {
+    background: #fff;
+    color: aquamarine !important; }
+#header > footer .icon li a {
   color: skyblue; }
 
 #wrapper {
@@ -132,7 +132,8 @@ a {
   list-style-type: none !important;
   font-weight: bold;
   /*好みで太字に*/ }
-.list :before {
+.list ul li:before {
+  /*疑似要素*/
   font-family: "Font Awesome 5 Free";
   content: "\f14a";
   position: absolute;
@@ -166,7 +167,7 @@ a {
   -webkit-tap-highlight-color: transparent;
   transition: .3s ease-out;
   /*変化を緩やかに*/ }
-  .nav_button :hover {
+  .nav_button:hover {
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
     /*浮き上がるように*/ }
 
@@ -174,6 +175,7 @@ a {
   position: relative;
   overflow: hidden; }
   .ripple .rp-effect {
+    /*エフェクト*/
     position: absolute;
     border-radius: 50%;
     opacity: 0.35;
