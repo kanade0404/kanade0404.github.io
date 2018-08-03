@@ -1,6 +1,8 @@
 $pc: 1024px;
 $tab: 680px;
 $sp: 480px;
+$iphonex: 375px;
+$galaxys5: 360;
 
 @mixin pc {
   @media (max-width: ($pc)) {
@@ -17,6 +19,16 @@ $sp: 480px;
 @mixin sp {
   @media (max-width: ($sp)) {
     @content;
+  }
+}
+@mixin iphonex {
+  @media (max-width: ($iphonex)) {
+    @content;
+  }
+}
+@mixin galaxys5 {
+  @media (max-width: ($galaxys5)) {
+    @content
   }
 }
 
@@ -91,24 +103,26 @@ a {
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
+  z-index: 9999;
+  top:0;
+  box-shadow: 0px 1px 2px gray;
   @include pc {
     height: 100%;
     width: 16em;
-    top: 0;
     right: 0;
   }
   @include sp{
     height:155px;
     width:100%;
-    z-index: 9999;
-    top: 0;
     left: 0;
-    box-shadow: 0px 1px 2px gray;
     padding: 10px;
     h1{
       font-size: 1.5rem;
       margin: 5px;
     }
+  }
+  @include iphonex{
+    height: 144px;
   }
   > {
     header .icon {
@@ -161,6 +175,12 @@ a {
         display: inline-flex;
         padding: 7px;
       }
+      @include iphonex{
+        padding: 2px;
+      }
+      @include galaxys5{
+        padding: 1px;
+      }
     }
     li a {
       transition: none;
@@ -173,6 +193,13 @@ a {
     ul li a.active {
       background: #fff;
       color: aquamarine !important;
+    }
+  }
+  footer{
+    ul{
+      @include iphonex{
+        margin: 0px;
+      }
     }
   }
   footer .icon li a {
