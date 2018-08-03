@@ -1,3 +1,25 @@
+$pc: 1024px;
+$tab: 680px;
+$sp: 480px;
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -62,22 +84,40 @@ a {
 
 #header {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background: aquamarine;
   color: skyblue;
-  height: 100%;
-  width: 16em;
-  overflow-y: auto;
   position: fixed;
   text-align: center;
-  top: 0;
-  right: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  @include pc {
+    height: 100%;
+    width: 16em;
+    top: 0;
+    right: 0;
+  }
+  @include sp{
+    height:155px;
+    width:100%;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 1px 2px gray;
+    padding: 10px;
+    h1{
+      font-size: 1.5rem;
+      margin: 5px;
+    }
+  }
   > {
     header .icon {
       display: block;
       margin: 0 auto 2.25em auto;
       width: 8em;
+      @include sp{
+        display: none;
+      }
     }
     footer {
       flex-shrink: 0;
@@ -116,6 +156,12 @@ a {
       margin: 0;
       padding: 0;
     }
+    li{
+      @include sp{
+        display: inline-flex;
+        padding: 7px;
+      }
+    }
     li a {
       transition: none;
       border: 0;
@@ -135,7 +181,13 @@ a {
 }
 
 #wrapper {
-  padding-right: 16em;
+  @include pc{
+    padding-right: 16em;
+  }
+  @include sp{
+    padding-top: 140px;
+    padding-right: 0px;
+  }
 }
 
 .box14 {
@@ -185,7 +237,7 @@ a {
   display: inline-block;
   background-color: #26a69b;
   /*背景色*/
-  color: #FFF;
+  color: #fff;
   /*文字色*/
   font-size: 1em;
   /*文字サイズ*/
@@ -198,13 +250,15 @@ a {
   border-radius: 3px;
   /*角の丸み*/
   cursor: pointer;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
   /*影*/
   -webkit-tap-highlight-color: transparent;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   /*変化を緩やかに*/
   &:hover {
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
+      0 3px 1px -1px rgba(0, 0, 0, 0.2);
     /*浮き上がるように*/
   }
 }
@@ -219,7 +273,7 @@ a {
     opacity: 0.35;
     /*波紋の濃さ*/
     transform: scale(0);
-    background: #FFF;
+    background: #fff;
     /*波紋色*/
     animation: ripple 700ms;
     pointer-events: none;
@@ -232,7 +286,6 @@ a {
     transform: scale(2);
   }
 }
-
 
 @keyframes ripple {
   to {
