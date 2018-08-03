@@ -67,15 +67,18 @@ a {
   right: 0; }
   @media (max-width: 1024px) {
     #header {
-      height: 100%;
-      width: 16em;
-      right: 0; } }
+      height: 155px;
+      width: 100%;
+      left: 0;
+      margin: 0;
+      padding: 0; } }
   @media (max-width: 480px) {
     #header {
       height: 155px;
       width: 100%;
       left: 0;
-      padding: 10px; } }
+      margin: 0;
+      padding: 0; } }
   @media (max-width: 480px) and (max-width: 375px) {
     #header {
       height: 144px; } }
@@ -90,6 +93,13 @@ a {
     display: block;
     margin: 0 auto 2.25em auto;
     width: 8em; }
+    @media (max-width: 1024px) {
+      #header > header .icon {
+        display: block;
+        margin: 32px;
+        position: absolute; }
+        #header > header .icon img {
+          margin: 0; } }
     @media (max-width: 480px) {
       #header > header .icon {
         display: none; } }
@@ -120,6 +130,10 @@ a {
     list-style: none;
     margin: 0;
     padding: 0; }
+  @media (max-width: 1024px) {
+    #header > nav li {
+      display: inline-flex;
+      padding: 10px; } }
   @media (max-width: 480px) {
     #header > nav li {
       display: inline-flex;
@@ -140,20 +154,24 @@ a {
   #header > nav ul li a.active {
     background: #fff;
     color: aquamarine !important; }
+@media (max-width: 1024px) {
+  #header > #footer ul {
+    margin: 6px; } }
 @media (max-width: 375px) {
-  #header > footer ul {
+  #header > #footer ul {
     margin: 0px; } }
 @media (max-width: 360px) {
-  #header > footer ul {
+  #header > #footer ul {
     margin: 0px; } }
-#header > footer .icon li a {
+#header > #footer .icon li a {
   color: skyblue; }
 
 #wrapper {
   padding-right: 16em; }
   @media (max-width: 1024px) {
     #wrapper {
-      padding-right: 16em; } }
+      padding-right: 0;
+      padding-right: 145px; } }
   @media (max-width: 480px) {
     #wrapper {
       padding-top: 140px;
