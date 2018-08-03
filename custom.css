@@ -96,7 +96,7 @@ a {
     @media (max-width: 1024px) {
       #header > header .icon {
         display: block;
-        margin: 32px;
+        margin: 14px;
         position: absolute; }
         #header > header .icon img {
           margin: 0; } }
@@ -133,7 +133,10 @@ a {
   @media (max-width: 1024px) {
     #header > nav li {
       display: inline-flex;
-      padding: 10px; } }
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-right: 10px;
+      padding-left: 10px; } }
   @media (max-width: 480px) {
     #header > nav li {
       display: inline-flex;
@@ -171,7 +174,7 @@ a {
   @media (max-width: 1024px) {
     #wrapper {
       padding-right: 0;
-      padding-right: 145px; } }
+      padding-top: 145px; } }
   @media (max-width: 480px) {
     #wrapper {
       padding-top: 140px;

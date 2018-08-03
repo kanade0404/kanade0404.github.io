@@ -140,7 +140,7 @@ a {
       width: 8em;
       @include ipadpro{
         display: block;
-        margin: 32px;
+        margin: 14px;
         position: absolute;
         img{
           margin: 0;
@@ -190,7 +190,10 @@ a {
     li{
       @include ipadpro{
         display: inline-flex;
-        padding:10px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-right: 10px;
+        padding-left: 10px;
       }
       @include sp{
         display: inline-flex;
@@ -238,7 +241,7 @@ a {
   padding-right: 16em;
   @include ipadpro{
     padding-right: 0;
-    padding-right: 145px;
+    padding-top: 145px;
   }
   @include sp{
     padding-top: 140px;
