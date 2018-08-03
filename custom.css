@@ -61,7 +61,10 @@ a {
   overflow-y: auto;
   z-index: 9999;
   top: 0;
-  box-shadow: 0px 1px 2px gray; }
+  box-shadow: 0px 1px 2px gray;
+  height: 100%;
+  width: 16em;
+  right: 0; }
   @media (max-width: 1024px) {
     #header {
       height: 100%;
@@ -72,13 +75,17 @@ a {
       height: 155px;
       width: 100%;
       left: 0;
-      padding: 10px; }
+      padding: 10px; } }
+  @media (max-width: 480px) and (max-width: 375px) {
+    #header {
+      height: 144px; } }
+  @media (max-width: 480px) and (max-width: 360px) {
+    #header {
+      height: 144px; } }
+  @media (max-width: 480px) {
       #header h1 {
         font-size: 1.5rem;
         margin: 5px; } }
-  @media (max-width: 375px) {
-    #header {
-      height: 144px; } }
   #header > header .icon {
     display: block;
     margin: 0 auto 2.25em auto;
@@ -120,7 +127,7 @@ a {
   @media (max-width: 375px) {
     #header > nav li {
       padding: 2px; } }
-  @media (max-width: 360) {
+  @media (max-width: 360px) {
     #header > nav li {
       padding: 1px; } }
   #header > nav li a {
@@ -136,16 +143,29 @@ a {
 @media (max-width: 375px) {
   #header > footer ul {
     margin: 0px; } }
+@media (max-width: 360px) {
+  #header > footer ul {
+    margin: 0px; } }
 #header > footer .icon li a {
   color: skyblue; }
 
-@media (max-width: 1024px) {
-  #wrapper {
-    padding-right: 16em; } }
-@media (max-width: 480px) {
-  #wrapper {
-    padding-top: 140px;
-    padding-right: 0px; } }
+#wrapper {
+  padding-right: 16em; }
+  @media (max-width: 1024px) {
+    #wrapper {
+      padding-right: 16em; } }
+  @media (max-width: 480px) {
+    #wrapper {
+      padding-top: 140px;
+      padding-right: 0px; } }
+  @media (max-width: 375px) {
+    #wrapper {
+      padding-top: 140px;
+      padding-right: 0px; } }
+  @media (max-width: 360px) {
+    #wrapper {
+      padding-top: 140px;
+      padding-right: 0px; } }
 
 .box14 {
   padding: 0.2em 0.5em;

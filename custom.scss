@@ -2,7 +2,7 @@ $pc: 1024px;
 $tab: 680px;
 $sp: 480px;
 $iphonex: 375px;
-$galaxys5: 360;
+$galaxys5: 360px;
 
 @mixin pc {
   @media (max-width: ($pc)) {
@@ -106,6 +106,9 @@ a {
   z-index: 9999;
   top:0;
   box-shadow: 0px 1px 2px gray;
+  height: 100%;
+  width: 16em;
+  right: 0;
   @include pc {
     height: 100%;
     width: 16em;
@@ -116,13 +119,16 @@ a {
     width:100%;
     left: 0;
     padding: 10px;
+    @include iphonex{
+      height: 144px;
+    }
+    @include galaxys5{
+      height: 144px;
+    }
     h1{
       font-size: 1.5rem;
       margin: 5px;
     }
-  }
-  @include iphonex{
-    height: 144px;
   }
   > {
     header .icon {
@@ -200,6 +206,9 @@ a {
       @include iphonex{
         margin: 0px;
       }
+      @include galaxys5{
+        margin: 0px;
+      }
     }
   }
   footer .icon li a {
@@ -208,10 +217,19 @@ a {
 }
 
 #wrapper {
+  padding-right: 16em;
   @include pc{
     padding-right: 16em;
   }
   @include sp{
+    padding-top: 140px;
+    padding-right: 0px;
+  }
+  @include iphonex{
+    padding-top: 140px;
+    padding-right: 0px;
+  }
+  @include galaxys5{
     padding-top: 140px;
     padding-right: 0px;
   }
