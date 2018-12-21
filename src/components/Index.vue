@@ -1,27 +1,10 @@
 <template>
-  <section>
-    <h4>name: kanade0404</h4>
-    <h4>Language</h4>
-    <ul>
-      <li><p>Python</p></li>
-      <li><p>JavaScript</p></li>
-      <li><p>Java</p></li>
-      <li><p>C#</p></li>
-      <li><p>TypeScript</p></li>
-      <li><p>PHP</p></li>
-    </ul>
-    <h4>Framework</h4>
-    <ul>
-      <li><p>Django</p></li>
-      <li><p>.NET Framework</p></li>
-      <li><p>Angular</p></li>
-      <li><p>Nuxt.js</p></li>
-      <li><p>Spring Boot</p></li>
-      <li><p>Laravel</p></li>
-      <li><p>Tensorflow</p></li>
-      <li><p>PyTorch</p></li>
-    </ul>
-  </section>
+  <div class="container">
+    <div class="wrapper">
+      <h1>かなで(py_kanade)</h1>
+      <img class="icon_image" src="https://www.gravatar.com/avatar/64a60d57580ee24667361e0aacc9f01c" alt>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -31,7 +14,15 @@ export default {
 </script>
 
 <style scoped>
-li {
+.wrapper{
+  margin: 30px;
+  text-align: center;
+  background-color: #efefef
+}
+.icon_image{
+  border-radius: 50%;
+}
+li{
   display: inline-flex;
 }
 </style>
