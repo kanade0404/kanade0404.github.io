@@ -1,4 +1,4 @@
-# kanade0404.github.io
+# kanade.me
 
 > A Vue.js project
 
@@ -24,4 +24,4 @@ npm run unit
 npm test
 ```
 
-For a childrened explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
