@@ -29,7 +29,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 img {
   border-radius: 50%;
   height: 200px;
@@ -38,7 +38,6 @@ img {
 .content-info {
   width: 50%;
   margin: 0 auto;
-  text-align: center;
   padding-left: 60px;
   text-align: left;
 }

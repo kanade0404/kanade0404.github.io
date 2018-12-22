@@ -8,20 +8,27 @@
         </div>
       </section>
     </v-app>
+    <TheFooter/>
   </div>
 </template>
 
 <script>
 import TheHeader from '@/components/TheHeader.vue'
+import TheFooter from '@/components/TheFooter.vue'
+
 export default {
   name: 'App',
   components: {
-    TheHeader
+    TheHeader,
+    TheFooter
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+html, body, #app{
+  height: 100%;
+}
 .body-content{
   padding-top: 40px;
 }

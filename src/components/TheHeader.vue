@@ -29,8 +29,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .title{
   cursor: pointer;
+  height: 25px;
 }
 </style>
