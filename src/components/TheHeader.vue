@@ -12,6 +12,13 @@
 
 <script>
 export default {
+  data: () => ({
+    items: [
+      {title: 'About Me', click: 'clickedAboutMe'},
+      {title: 'Skills', click: 'clickedSkills'},
+      {title: 'contact', click: 'clickedContact'}
+    ]
+  }),
   methods: {
     clickedTitle () {
       this.$router.push('/')
@@ -34,4 +41,5 @@ export default {
   cursor: pointer;
   height: 25px;
 }
+
 </style>

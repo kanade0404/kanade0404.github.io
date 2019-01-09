@@ -2,16 +2,17 @@
   <div>
     <div class="skills-info">
       <div class="skill-category">
-        <div class="font-weight-medium display-2 business">Business</div>
-        <div class="skills-item cs">C#(2018.4〜9)</div>
-        <div class="skills-item java">Java(2018.10〜9)</div>
-        <div class="skills-item js">JavaScript(2018.4〜6, 10〜)</div>
+        <div class="font-weight-medium display-2 business">業務経験</div>
+        <div class="skills-item dotnet">.NET Framework</div>
+        <div class="skills-item spring-boot">Spring Boot</div>
+        <div class="skills-item angularjs">AngularJS</div>
       </div>
       <div class="skill-category">
-        <div class="font-weight-medium display-2 private">Private</div>
-        <div class="skills-item py">Python(1年以上)</div>
-        <div class="skills-item php">PHP(ちょっとだけ)</div>
-        <div class="skills-item ts">TypeScript(ちょっとだけ)</div>
+        <div class="font-weight-medium display-2 private">個人経験</div>
+        <div class="skills-item django">Django</div>
+        <div class="skills-item laravel">Laravel</div>
+        <div class="skills-item vue">Vue</div>
+        <div class="skills-item angular">Angular</div>
       </div>
     </div>
   </div>
@@ -32,22 +33,22 @@
 .private{
   color: #607D8B;
 }
-.cs{
+.angularjs, .angular{
+  color: red;
+}
+.dotnet{
   color: #008000;
 }
-.java{
+.spring-boot{
   color: #808000;
 }
-.js{
+.vue{
   color: #00FF00;
 }
-.py{
+.django{
   color: #0000FF;
 }
-.php{
+.larvel{
   color: #FF00FF;
-}
-.ts{
-  color: #008080;
 }
 </style>
