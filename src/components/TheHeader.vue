@@ -1,6 +1,8 @@
 <template>
   <v-toolbar color="teal lighten-3">
-    <v-toolbar-title class="title" @click="clickedTitle"><span>kanade page</span></v-toolbar-title>
+    <v-toolbar-title class="title" @click="clickedTitle">
+      <span>kanade.dev</span>
+    </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
       <v-btn flat @click="clickedAboutMe">About Me</v-btn>
@@ -12,13 +14,6 @@
 
 <script>
 export default {
-  data: () => ({
-    items: [
-      {title: 'About Me', click: 'clickedAboutMe'},
-      {title: 'Skills', click: 'clickedSkills'},
-      {title: 'contact', click: 'clickedContact'}
-    ]
-  }),
   methods: {
     clickedTitle () {
       this.$router.push('/')
@@ -37,9 +32,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.title{
+$sp: 480px;
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+.title {
   cursor: pointer;
   height: 25px;
 }
-
+.side-icon {
+  display: none;
+  @include sp {
+    display: inline;
+  }
+}
 </style>

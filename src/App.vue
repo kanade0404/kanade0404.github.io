@@ -26,10 +26,12 @@ export default {
 </script>
 
 <style lang="scss">
-html, body, #app{
+html,
+body,
+#app {
   height: 100%;
 }
-.body-content{
+.body-content {
   padding-top: 40px;
 }
 #main {
