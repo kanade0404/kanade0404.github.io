@@ -36,7 +36,7 @@ body,
   height: 100%;
 }
 .body-content {
-  padding-top: 40px;
+  padding-top: 80px;
 }
 #main {
   margin: 0 auto;

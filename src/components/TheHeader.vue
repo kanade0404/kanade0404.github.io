@@ -4,6 +4,7 @@
       clipped
       app
       v-model="navBar"
+      width="200"
     >
       <v-list dense class="pt-0">
         <v-list-tile>
@@ -34,7 +35,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="teal lighten-3">
+    <v-toolbar fixed color="teal lighten-3">
       <v-toolbar-title class="title" @click="clickedTitle">
         <span>kanade.dev</span>
       </v-toolbar-title>

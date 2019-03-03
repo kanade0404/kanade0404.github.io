@@ -45,7 +45,7 @@
   margin:20px;
 }
 .skills-item{
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   margin: 5px;
 }

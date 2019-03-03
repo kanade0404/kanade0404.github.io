@@ -56,16 +56,20 @@ img {
 .content {
   text-align: center;
   background-color: #e0e0e0;
+  padding: 10px;
 }
 .content-info {
+  width: 60%;
   margin: 0 auto;
-  padding-left: 60px;
+  padding-left: 110px;
   text-align: left;
   @include tab {
     width: 100%;
+    padding-left: 0;
   }
   @include pro {
     width: 70%;
+    padding-left: 50px;
   }
   @include sp {
     padding-left: 5px;
