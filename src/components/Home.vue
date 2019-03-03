@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="content">
     <div class="content-item icon">
       <img
         src="https://avatars3.githubusercontent.com/u/32828502?s=400&u=334422e5e252dbe944aa8b3ab56d2f1d6ca4398c&v=4"
@@ -23,27 +23,66 @@
         <span class="group pa-2">
           <v-icon x-large>room</v-icon>
         </span>
-        Kanagawa Japan
+        Kanagawa
       </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+$sp: 480px;
+$tab: 959px;
+$ipadpro: 1024px;
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin pro {
+  @media (max-width: ($ipadpro)) {
+    @content;
+  }
+}
 img {
   border-radius: 50%;
   height: 200px;
   border: 6px solid #008080;
 }
+.content {
+  text-align: center;
+  background-color: #e0e0e0;
+}
 .content-info {
-  width: 50%;
   margin: 0 auto;
   padding-left: 60px;
   text-align: left;
+  @include tab {
+    width: 100%;
+  }
+  @include pro {
+    width: 70%;
+  }
+  @include sp {
+    padding-left: 5px;
+    width: 100%;
+  }
 }
 .content-item {
   font-size: 30px;
   margin: 10px;
   color: #008000;
+  @include sp {
+    font-size: 25px;
+  }
+  .icon {
+    @include sp {
+      height: 150px;
+    }
+  }
 }
 </style>

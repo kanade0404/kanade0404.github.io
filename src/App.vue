@@ -3,9 +3,7 @@
     <TheHeader/>
     <v-app class="body-content" light>
       <section id="main">
-        <div class="content">
-          <router-view/>
-        </div>
+        <router-view/>
       </section>
     </v-app>
     <TheFooter/>
@@ -26,6 +24,12 @@ export default {
 </script>
 
 <style lang="scss">
+$sp: 480px;
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
 html,
 body,
 #app {
@@ -36,10 +40,9 @@ body,
 }
 #main {
   margin: 0 auto;
-  background-color: #efefef;
   width: 60%;
-}
-.content {
-  text-align: center;
+  @include sp {
+    width: 80%;
+  }
 }
 </style>
