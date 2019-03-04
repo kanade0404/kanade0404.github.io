@@ -37,10 +37,16 @@ body,
 }
 .body-content {
   padding-top: 80px;
+  height: auto !important;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
 }
 #main {
   margin: 0 auto;
   width: 60%;
+  padding-bottom: 100px;
   @include sp {
     width: 80%;
   }

@@ -20,3 +20,10 @@
     </v-card>
   </v-footer>
 </template>
+
+<style lang="scss">
+footer {
+  bottom: 0;
+  width: 100%;
+}
+</style>

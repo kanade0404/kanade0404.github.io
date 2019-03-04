@@ -2,6 +2,7 @@
   <div class="content">
     <div class="content-item icon">
       <img
+      class="icon"
         src="https://avatars3.githubusercontent.com/u/32828502?s=400&u=334422e5e252dbe944aa8b3ab56d2f1d6ca4398c&v=4"
         alt
       >
@@ -9,25 +10,36 @@
     <div class="content-info">
       <div class="content-item name">
         <span class="group pa-2">
-          <v-icon x-large>account_circle</v-icon>
+          <v-icon size="{sp:medium, pc:x-large}">account_circle</v-icon>
         </span>
         かなで(kanade)
       </div>
       <div class="content-item job">
         <span class="group pa-2">
-          <v-icon x-large>work</v-icon>
+          <v-icon size="{sp:medium, pc:x-large}">work</v-icon>
         </span>
         Web Engineer
       </div>
       <div class="content-item location">
         <span class="group pa-2">
-          <v-icon x-large>room</v-icon>
+          <v-icon size="{sp:medium, pc:x-large}">room</v-icon>
         </span>
         Kanagawa
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  return: {
+    data: {
+      pc: window.innerWidth > 480,
+      sp: window.innerWidth <= 480
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 $sp: 480px;
@@ -81,11 +93,11 @@ img {
   margin: 10px;
   color: #008000;
   @include sp {
-    font-size: 25px;
+    font-size: 15px;
   }
   .icon {
     @include sp {
-      height: 150px;
+      height: 100px;
     }
   }
 }
