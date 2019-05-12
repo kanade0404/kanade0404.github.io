@@ -18,7 +18,7 @@
         <span class="group pa-2">
           <v-icon size="{sp:medium, pc:x-large}">work</v-icon>
         </span>
-        Web Engineer
+        Web Engineer(Backend)
       </div>
       <div class="content-item location">
         <span class="group pa-2">
