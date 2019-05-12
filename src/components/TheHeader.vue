@@ -1,13 +1,8 @@
 <template>
   <div>
-    <v-navigation-drawer
-      clipped
-      app
-      v-model="navBar"
-      width="200"
-    >
+    <v-navigation-drawer clipped app v-model="navBar" width="200" class="drawer">
       <v-list dense class="pt-0">
-        <v-list-tile>
+        <v-list-tile class="tile">
           <v-list-tile-action>
             <v-icon>account_box</v-icon>
           </v-list-tile-action>
@@ -15,7 +10,7 @@
             <v-list-tile-title>About Me</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile>
+        <v-list-tile class="tile">
           <v-list-tile-action>
             <span style="color: gray">
               <i class="fas fa-lg fa-laptop-code"></i>
@@ -25,7 +20,7 @@
             <v-list-tile-title>Skills</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile>
+        <v-list-tile class="tile">
           <v-list-tile-action>
             <v-icon>contacts</v-icon>
           </v-list-tile-action>
@@ -36,9 +31,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar fixed color="teal lighten-3">
-      <v-toolbar-title class="title" @click="clickedTitle">
-        kanade.dev
-      </v-toolbar-title>
+      <v-toolbar-title class="title" @click="clickedTitle">kanade.dev</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn flat @click="clickedAboutMe">About Me</v-btn>
@@ -56,20 +49,20 @@ export default {
     navBar: false
   }),
   methods: {
-    clickedTitle () {
-      this.$router.push('/')
+    clickedTitle() {
+      this.$router.push("/");
     },
-    clickedAboutMe () {
-      this.$router.push('/about')
+    clickedAboutMe() {
+      this.$router.push("/about");
     },
-    clickedSkills () {
-      this.$router.push('/skills')
+    clickedSkills() {
+      this.$router.push("/skills");
     },
-    clickedContact () {
-      this.$router.push('/contact')
+    clickedContact() {
+      this.$router.push("/contact");
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -88,6 +81,15 @@ $tab: 959px;
 .title {
   cursor: pointer;
   height: 25px;
+}
+.drawer {
+  display: none;
+  @include tab {
+    display: inline;
+  }
+  .tile {
+    cursor: pointer;
+  }
 }
 .side-icon {
   display: none;

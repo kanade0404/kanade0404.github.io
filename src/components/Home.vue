@@ -2,7 +2,7 @@
   <div class="content">
     <div class="content-item icon">
       <img
-      class="icon"
+        class="icon"
         src="https://avatars3.githubusercontent.com/u/32828502?s=400&u=334422e5e252dbe944aa8b3ab56d2f1d6ca4398c&v=4"
         alt
       >
@@ -26,6 +26,9 @@
         </span>
         Kanagawa
       </div>
+      <v-card class="headline font-weight-medium jobSearch" color="warning">
+        <v-card-text>I'm looking for a job. Please contact my twitter direct mail or gmail if you are interested in me!</v-card-text>
+      </v-card>
     </div>
   </div>
 </template>
@@ -38,7 +41,7 @@ export default {
       sp: window.innerWidth <= 480
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -86,6 +89,9 @@ img {
   @include sp {
     padding-left: 5px;
     width: 100%;
+  }
+  .jobSearch {
+    text-align: center;
   }
 }
 .content-item {

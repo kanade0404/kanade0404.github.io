@@ -1,79 +1,109 @@
 <template>
-  <div class="content">
-    <div class="skill-category">
-      <h3 class="font-weight-medium headline skills-title business">業務</h3>
-      <div class="skills-content">
-        <div class="skills-item spring-boot">Spring Boot</div>
-        <div class="skills-item dotnet">.NET Framework</div>
-        <div class="skills-item angularjs">AngularJS</div>
-        <div class="skills-item">PostgreSQL</div>
-        <div class="skills-item">Git</div>
-        <div class="skills-item">Subversion</div>
-      </div>
-    </div>
-    <div class="skill-category">
-      <h3 class="font-weight-medium headline skills-title private">個人</h3>
-      <div class="skills-content">
-        <div class="skills-item django">Django</div>
-        <div class="skills-item laravel">Laravel</div>
-        <div class="skills-item vue">Vue</div>
-        <div class="skills-item angular">Angular</div>
-        <div class="skills-item">Docker</div>
-      </div>
-    </div>
-    <div class="skill-category">
-      <h3 class="font-weight-medium headline skills-title">興味</h3>
-      <div class="skills-content">
-        <div class="skills-item">テスト自動化</div>
-        <div class="skills-item">Kotlin</div>
-        <div class="skills-item">Go言語</div>
-        <div class="skills-item">Google App Engine</div>
-      </div>
-    </div>
-  </div>
+  <v-container grid-list-md text-xs-center>
+    <v-layout row wrap>
+      <v-flex xs12>
+        <v-card dark color="primary">
+          <v-card-text class="px-0">Language</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark ripple color="#3776ab">
+          <v-card-text class="px-0">Python</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="#8b4513">
+          <v-card-text class="px-0">Java</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="#ffd700">
+          <v-card-text class="px-0" style="color:black">JavaScript</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="#1e90ff">
+          <v-card-text class="px-0">TypeScript</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs12>
+        <v-card dark color="secondary">
+          <v-card-text class="px-0">Framework</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="#0C3C26">
+          <v-card-text class="px-0">Django</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="#00ff7f">
+          <v-card-text class="px-0" style="color:black">Spring Boot</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="#dc143c">
+          <v-card-text class="px-0">Angular</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="#4fc08d">
+          <v-card-text class="px-0" style="color:black">Vue.js</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs12>
+        <v-card dark color="primary">
+          <v-card-text class="px-0">Database</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="#ffa500">
+          <v-card-text class="px-0" style="color:black">MySQL</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="#00bfff">
+          <v-card-text class="px-0" style="color:black">PostgreSQL</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="#ff0000">
+          <v-card-text class="px-0">Oracle</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="#228b22">
+          <v-card-text class="px-0">MongoDB</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs12>
+        <v-card dark color="secondary">
+          <v-card-text class="px-0">Others</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="primary">
+          <v-card-text class="px-0">Git</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="secondary">
+          <v-card-text class="px-0">Docker</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="primary">
+          <v-card-text class="px-0">Linux(Ubuntu)</v-card-text>
+        </v-card>
+      </v-flex>
+      <v-flex xs3>
+        <v-card dark color="secondary">
+          <v-card-text class="px-0">Google Cloud Platform</v-card-text>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <style lang="scss" scoped>
-.content {
-  background-color: #e0e0e0;
-  padding: 20px;
-}
-.skills-title {
-  text-align: center;
-}
-.skills-content {
-  margin:20px;
-}
-.skills-item{
-  font-size: 15px;
-  font-weight: bold;
-  margin: 5px;
-}
-.category-type{
-  margin: 10px;
-}
-.business{
-  color: #795548;
-}
-.private{
-  color: #607D8B;
-}
-.angularjs, .angular{
-  color: red;
-}
-.dotnet{
-  color: #008000;
-}
-.spring-boot{
-  color: #808000;
-}
-.vue{
-  color: #00FF00;
-}
-.django{
-  color: #0000FF;
-}
-.laravel{
-  color: #FF00FF;
-}
 </style>
