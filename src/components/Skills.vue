@@ -1,109 +1,90 @@
 <template>
   <v-container grid-list-md text-xs-center>
-    <v-layout row wrap>
+    <v-layout row wrap v-bind="binding">
       <v-flex xs12>
-        <v-card dark color="primary">
-          <v-card-text class="px-0">Language</v-card-text>
+        <v-card light color="teal lighten-3">
+          <v-card-text class="px-0">{{categories[0]}}</v-card-text>
         </v-card>
       </v-flex>
-      <v-flex xs3>
-        <v-card dark ripple color="#3776ab">
-          <v-card-text class="px-0">Python</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs3>
-        <v-card dark color="#8b4513">
-          <v-card-text class="px-0">Java</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs3>
-        <v-card dark color="#ffd700">
-          <v-card-text class="px-0" style="color:black">JavaScript</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs3>
-        <v-card dark color="#1e90ff">
-          <v-card-text class="px-0">TypeScript</v-card-text>
+      <v-flex xs3 v-for="lang in languages" v-bind:key="lang.name">
+        <v-card light color="light-green lighten-4">
+          <v-card-text class="px-0">{{lang.name}}</v-card-text>
         </v-card>
       </v-flex>
       <v-flex xs12>
-        <v-card dark color="secondary">
-          <v-card-text class="px-0">Framework</v-card-text>
+        <v-card light color="teal lighten-3">
+          <v-card-text class="px-0">{{categories[1]}}</v-card-text>
         </v-card>
       </v-flex>
-      <v-flex xs3>
-        <v-card dark color="#0C3C26">
-          <v-card-text class="px-0">Django</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs3>
-        <v-card dark color="#00ff7f">
-          <v-card-text class="px-0" style="color:black">Spring Boot</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs3>
-        <v-card dark color="#dc143c">
-          <v-card-text class="px-0">Angular</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs3>
-        <v-card dark color="#4fc08d">
-          <v-card-text class="px-0" style="color:black">Vue.js</v-card-text>
+      <v-flex xs3 v-for="fw in framework" v-bind:key="fw.name">
+        <v-card light color="light-green lighten-4">
+          <v-card-text class="px-0">{{fw.name}}</v-card-text>
         </v-card>
       </v-flex>
       <v-flex xs12>
-        <v-card dark color="primary">
-          <v-card-text class="px-0">Database</v-card-text>
+        <v-card light color="teal lighten-3">
+          <v-card-text class="px-0">{{categories[2]}}</v-card-text>
         </v-card>
       </v-flex>
-      <v-flex xs3>
-        <v-card dark color="#ffa500">
-          <v-card-text class="px-0" style="color:black">MySQL</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs3>
-        <v-card dark color="#00bfff">
-          <v-card-text class="px-0" style="color:black">PostgreSQL</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs3>
-        <v-card dark color="#ff0000">
-          <v-card-text class="px-0">Oracle</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs3>
-        <v-card dark color="#228b22">
-          <v-card-text class="px-0">MongoDB</v-card-text>
+      <v-flex xs3 v-for="db in databases" v-bind:key="db.name">
+        <v-card light color="light-green lighten-4">
+          <v-card-text class="px-0">{{db.name}}</v-card-text>
         </v-card>
       </v-flex>
       <v-flex xs12>
-        <v-card dark color="secondary">
-          <v-card-text class="px-0">Others</v-card-text>
+        <v-card light color="teal lighten-3">
+          <v-card-text class="px-0">{{categories[3]}}</v-card-text>
         </v-card>
       </v-flex>
-      <v-flex xs3>
-        <v-card dark color="primary">
-          <v-card-text class="px-0">Git</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs3>
-        <v-card dark color="secondary">
-          <v-card-text class="px-0">Docker</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs3>
-        <v-card dark color="primary">
-          <v-card-text class="px-0">Linux(Ubuntu)</v-card-text>
-        </v-card>
-      </v-flex>
-      <v-flex xs3>
-        <v-card dark color="secondary">
-          <v-card-text class="px-0">Google Cloud Platform</v-card-text>
+      <v-flex xs3 v-for="ot in others" v-bind:key="ot.name">
+        <v-card light color="light-green lighten-4">
+          <v-card-text class="px-0">{{ot.name}}</v-card-text>
         </v-card>
       </v-flex>
     </v-layout>
   </v-container>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    categories: ["Language", "Framework", "Database", "Others"],
+    languages: [
+      { name: "Python" },
+      { name: "Java" },
+      { name: "JavaScript" },
+      { name: "TypeScript" }
+    ],
+    framework: [
+      { name: "Django" },
+      { name: "Spring Boot" },
+      { name: "Angular" },
+      { name: "Vue.js" }
+    ],
+    databases: [
+      { name: "MySQL" },
+      { name: "PostgreSQL" },
+      { name: "Oracle" },
+      { name: "MongoDB" }
+    ],
+    others: [
+      { name: "Git" },
+      { name: "Docker" },
+      { name: "Linux" },
+      { name: "GClP" }
+    ]
+  }),
+  computed: {
+    binding() {
+      const binding = {};
+      if (this.$vuetify.breakpoint.xs) binding.column = true;
+      return binding;
+    }
+  }
+};
+</script>
+
+
 
 <style lang="scss" scoped>
 </style>

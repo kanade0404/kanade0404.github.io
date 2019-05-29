@@ -41,6 +41,16 @@
           </a>
         </div>
       </div>
+      <div class="contact-item email">
+        <div>
+          <span>
+            <i class="fas fa-sticky-note"></i>
+          </span>
+          <a href="https://scrapbox.io/pykanade/">
+            <span>Scrapbox</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>

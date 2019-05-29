@@ -18,7 +18,7 @@
         <span class="group pa-2">
           <v-icon size="{sp:medium, pc:x-large}">work</v-icon>
         </span>
-        Web Engineer(Backend)
+        Web Engineer
       </div>
       <div class="content-item location">
         <span class="group pa-2">
@@ -26,9 +26,6 @@
         </span>
         Kanagawa
       </div>
-      <v-card class="headline font-weight-medium jobSearch" color="warning">
-        <v-card-text>I'm looking for a job. Please contact my twitter direct mail or gmail if you are interested in me!</v-card-text>
-      </v-card>
     </div>
   </div>
 </template>
@@ -89,9 +86,6 @@ img {
   @include sp {
     padding-left: 5px;
     width: 100%;
-  }
-  .jobSearch {
-    text-align: center;
   }
 }
 .content-item {
