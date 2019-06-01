@@ -51,8 +51,5 @@ body,
   right: 0;
   width: 100%;
   padding-bottom: 100px;
-  // @include sp {
-  //   width: 80%;
-  // }
 }
 </style>

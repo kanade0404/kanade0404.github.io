@@ -79,22 +79,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$sp: 480px;
-$tab: 959px;
-$ipadpro: 1024px;
-@mixin sp {
-  @media (max-width: ($sp)) {
-    @content;
-  }
-}
-@mixin tab {
-  @media (max-width: ($tab)) {
-    @content;
-  }
-}
-@mixin pro {
-  @media (max-width: ($ipadpro)) {
-    @content;
-  }
-}
 </style>

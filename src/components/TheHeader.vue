@@ -31,7 +31,9 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar fixed color="teal lighten-3">
-      <v-toolbar-title class="title" @click="clickedTitle">kanade pages</v-toolbar-title>
+      <v-toolbar-title class="title" @click="clickedTitle">
+        <span>kanade pages</span>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn flat @click="clickedAboutMe">About Me</v-btn>
