@@ -4,11 +4,11 @@
       <v-flex xs1></v-flex>
       <v-flex xs10>
         <v-card light color="teal lighten-3">
-          <v-img class="white-text" height="200px" v-bind:src="require('@/assets/headline.jpg')">
+          <v-img class="white--text" height="200px" v-bind:src="require('@/assets/headline.jpg')">
             <v-container fill-height fluid>
               <v-layout fill-height>
                 <v-flex 12 xs align-end flexbox>
-                  <span class="display-1 font-weight bold" style="color:white">Who am I?</span>
+                  <span class="display-1 font-weight bold">Who am I?</span>
                 </v-flex>
               </v-layout>
             </v-container>
@@ -21,25 +21,25 @@
                     <v-flex xs3>
                       <span>
                         <v-icon size="{sp:medium, pc:x-large}">account_circle</v-icon>
-                        <span class="user-info">かなで(kanade)</span>
+                        <span>かなで(kanade)</span>
                       </span>
                     </v-flex>
                     <v-flex xs3>
                       <span>
                         <v-icon size="{sp:medium, pc:x-large}">work</v-icon>
-                        <span class="user-info">Web Engineer</span>
+                        <span>Web Engineer</span>
                       </span>
                     </v-flex>
                     <v-flex xs3>
                       <span>
                         <v-icon size="{sp:medium, pc:x-large}">room</v-icon>
-                        <span class="user-info">Kanagawa</span>
+                        <span>Kanagawa</span>
                       </span>
                     </v-flex>
                     <v-flex xs3>
                       <span>
                         <v-icon size="{sp:medium, pc:x-large}">favorite</v-icon>
-                        <span class="user-info">Python</span>
+                        <span>Python</span>
                       </span>
                     </v-flex>
                   </v-layout>
@@ -98,49 +98,4 @@ $ipadpro: 1024px;
     @content;
   }
 }
-.user-info {
-  padding: 0;
-  margin: 0 auto;
-}
-// img {
-//   border-radius: 50%;
-//   height: 200px;
-//   border: 6px solid #008080;
-// }
-// .content {
-//   text-align: center;
-//   background-color: #e0e0e0;
-//   padding: 10px;
-// }
-// .content-info {
-//   width: 60%;
-//   margin: 0 auto;
-//   padding-left: 110px;
-//   text-align: left;
-//   @include tab {
-//     width: 100%;
-//     padding-left: 0;
-//   }
-//   @include pro {
-//     width: 70%;
-//     padding-left: 50px;
-//   }
-//   @include sp {
-//     padding-left: 5px;
-//     width: 100%;
-//   }
-// }
-// .content-item {
-//   font-size: 30px;
-//   margin: 10px;
-//   color: #008000;
-//   @include sp {
-//     font-size: 15px;
-//   }
-//   .icon {
-//     @include sp {
-//       height: 100px;
-//     }
-//   }
-// }
 </style>

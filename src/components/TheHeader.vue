@@ -2,29 +2,29 @@
   <div>
     <v-navigation-drawer clipped app v-model="navBar" width="200" class="drawer">
       <v-list dense class="pt-0">
-        <v-list-tile class="tile">
+        <v-list-tile class="tile" @click="clickedAboutMe">
           <v-list-tile-action>
             <v-icon>account_box</v-icon>
           </v-list-tile-action>
-          <v-list-tile-content @click="clickedAboutMe">
+          <v-list-tile-content>
             <v-list-tile-title>About Me</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile class="tile">
+        <v-list-tile class="tile" @click="clickedSkills">
           <v-list-tile-action>
             <span style="color: gray">
               <i class="fas fa-lg fa-laptop-code"></i>
             </span>
           </v-list-tile-action>
-          <v-list-tile-content @click="clickedSkills">
+          <v-list-tile-content>
             <v-list-tile-title>Skills</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile class="tile">
+        <v-list-tile class="tile" @click="clickedContact">
           <v-list-tile-action>
             <v-icon>contacts</v-icon>
           </v-list-tile-action>
-          <v-list-tile-content @click="clickedContact">
+          <v-list-tile-content>
             <v-list-tile-title>Contacts</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>

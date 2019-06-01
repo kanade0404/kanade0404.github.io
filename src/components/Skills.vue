@@ -71,7 +71,7 @@ export default {
       { name: "Git" },
       { name: "Docker" },
       { name: "Linux" },
-      { name: "GClP" }
+      { name: "GCP" }
     ]
   }),
   computed: {
@@ -83,8 +83,6 @@ export default {
   }
 };
 </script>
-
-
 
 <style lang="scss" scoped>
 </style>
