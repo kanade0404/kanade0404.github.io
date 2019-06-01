@@ -11,16 +11,16 @@
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader.vue'
-import TheFooter from '@/components/TheFooter.vue'
+import TheHeader from "@/components/TheHeader.vue";
+import TheFooter from "@/components/TheFooter.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     TheHeader,
     TheFooter
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -45,10 +45,14 @@ body,
 }
 #main {
   margin: 0 auto;
-  width: 60%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
   padding-bottom: 100px;
-  @include sp {
-    width: 80%;
-  }
+  // @include sp {
+  //   width: 80%;
+  // }
 }
 </style>
