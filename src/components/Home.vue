@@ -66,8 +66,7 @@
 export default {
   data: () => ({
     pc: window.innerWidth > 480,
-    sp: window.innerWidth <= 480,
-    flexDirection: "row"
+    sp: window.innerWidth <= 480
   }),
   computed: {
     binding() {
