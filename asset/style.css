@@ -27,6 +27,19 @@ body {
   display: block;
   border-radius: 50%;
   border: 5px solid var(--main-gr-color);
+  animation: rotate 2s;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .profile__inner {
   position: relative;
