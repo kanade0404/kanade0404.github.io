@@ -57,7 +57,8 @@ span {
 }
 .skill__outer,
 .like__outer,
-.contact__outer {
+.contact__outer,
+.other__outer {
   width: 50%;
   position: relative;
   margin: 10px auto;
@@ -67,25 +68,29 @@ span {
 @media screen and (max-width: 1024px) {
   .skill__outer,
   .like__outer,
-  .contact__outer {
+  .contact__outer,
+  .other__outer {
     width: 65%;
   }
 }
 @media screen and (max-width: 480px) {
   .skill__outer,
   .like__outer,
-  .contact__outer {
+  .contact__outer,
+  .other__outer {
     width: 80%;
   }
 }
 .skill__title,
 .like__title,
-.contact__title {
+.contact__title,
+.other__title {
   margin: 10px 0;
 }
 .skill__title span,
 .like__title span,
-.contact__title span {
+.contact__title span,
+.other__title span {
   background-color: var(--main-rd-color);
   padding: 5px;
   border-radius: 5px;
@@ -94,39 +99,45 @@ span {
   margin: 10px auto;
 }
 .skill__container,
-.contact__container {
+.contact__container,
+.other__container {
   display: flex;
   margin: 10px;
 }
 @media screen and (max-width: 480px) {
   .skill__container,
-  .contact__container {
+  .contact__container,
+  .other__container {
     display: block;
   }
 }
 .skill__category,
-.contact__category {
+.contact__category,
+.other__category {
   height: auto;
   position: relative;
   display: flex;
-  width: 25%;
+  min-width: 25%;
 }
 @media screen and (max-width: 896px) {
   .skill__category,
-  .contact__category {
-    width: 50%;
+  .contact__category,
+  .other__category {
+    min-width: 45%;
   }
 }
 @media screen and (max-width: 480px) {
   .skill__category,
-  .contact__category {
+  .contact__category,
+  .other__category {
     width: 100%;
   }
 }
 
 .skill__list,
 .like__list,
-.contact__url {
+.contact__url,
+.other__url {
   flex-direction: row;
   height: auto;
   width: 100%;
@@ -134,7 +145,8 @@ span {
   flex-wrap: wrap;
 }
 .skill__category span,
-.contact__category span {
+.contact__category span,
+.other__category span {
   background-color: var(--main-bl-color);
   border-radius: 5px;
   margin: 5px;
@@ -149,7 +161,8 @@ span {
   margin: 5px;
   padding: 5px;
 }
-.contact__url a {
+.contact__url a,
+.other__url a {
   display: block;
   position: relative;
   margin: auto 0;
