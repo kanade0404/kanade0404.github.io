@@ -1,0 +1,86 @@
+:root {
+  --main-gr-color: #1eb2a6;
+  --main-bl-color: #d4f8e8;
+  --main-or-color: #ffa34d;
+  --main-rd-color: #f67575;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  /* background-color: var(--main-bl-color); */
+}
+.container {
+  width: 100%;
+  position: relative;
+}
+.profile__outer {
+  position: relative;
+  margin-top: 20px;
+  color: black;
+}
+.profile__outer img {
+  margin: 10px auto;
+  display: block;
+  border-radius: 50%;
+  border: 5px solid var(--main-gr-color);
+}
+.profile__inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.profile__inner h3 {
+  position: relative;
+  margin: auto 10px;
+}
+.skill__outer {
+  width: 80%;
+  position: relative;
+  margin: 10px auto;
+  padding: 10px;
+  border: 5px solid var(--main-gr-color);
+}
+.skill__title {
+  margin: 10px 0;
+}
+.skill__title span {
+  background-color: var(--main-rd-color);
+  padding: 5px;
+  border-radius: 5px;
+}
+.skill__inner {
+  margin: 10px auto;
+}
+.skill__container {
+  display: flex;
+  margin: 10px;
+}
+.skill__category {
+  height: auto;
+  position: relative;
+  display: flex;
+}
+.skill__list {
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill__category span {
+  background-color: var(--main-bl-color);
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  color: #000000;
+}
+.skill__list span {
+  background-color: var(--main-or-color);
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+}
