@@ -64,6 +64,13 @@ span {
   padding: 10px;
   border: 5px solid var(--main-gr-color);
 }
+@media screen and (max-width: 1024px) {
+  .skill__outer,
+  .like__outer,
+  .contact__outer {
+    width: 65%;
+  }
+}
 @media screen and (max-width: 480px) {
   .skill__outer,
   .like__outer,
@@ -91,19 +98,32 @@ span {
   display: flex;
   margin: 10px;
 }
+@media screen and (max-width: 480px) {
+  .skill__container,
+  .contact__container {
+    display: block;
+  }
+}
 .skill__category,
 .contact__category {
   height: auto;
   position: relative;
   display: flex;
-  width: 20%;
+  width: 25%;
+}
+@media screen and (max-width: 896px) {
+  .skill__category,
+  .contact__category {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 480px) {
   .skill__category,
   .contact__category {
-    min-width: 50%;
+    width: 100%;
   }
 }
+
 .skill__list,
 .like__list,
 .contact__url {
