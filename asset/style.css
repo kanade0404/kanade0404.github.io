@@ -10,12 +10,17 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
+  position: relative;
   color: #fff;
-  /* background-color: var(--main-bl-color); */
+  font-family: "Noto Sans JP", sans-serif;
+}
+span {
+  text-align: center;
 }
 .container {
   width: 100%;
-  position: relative;
+  height: 100%;
+  position: absolute;
 }
 .profile__outer {
   position: relative;
@@ -50,17 +55,30 @@ body {
   position: relative;
   margin: auto 10px;
 }
-.skill__outer {
-  width: 80%;
+.skill__outer,
+.like__outer,
+.contact__outer {
+  width: 50%;
   position: relative;
   margin: 10px auto;
   padding: 10px;
   border: 5px solid var(--main-gr-color);
 }
-.skill__title {
+@media screen and (max-width: 480px) {
+  .skill__outer,
+  .like__outer,
+  .contact__outer {
+    width: 80%;
+  }
+}
+.skill__title,
+.like__title,
+.contact__title {
   margin: 10px 0;
 }
-.skill__title span {
+.skill__title span,
+.like__title span,
+.contact__title span {
   background-color: var(--main-rd-color);
   padding: 5px;
   border-radius: 5px;
@@ -68,32 +86,51 @@ body {
 .skill__inner {
   margin: 10px auto;
 }
-.skill__container {
+.skill__container,
+.contact__container {
   display: flex;
   margin: 10px;
 }
-.skill__category {
+.skill__category,
+.contact__category {
   height: auto;
   position: relative;
   display: flex;
+  width: 20%;
 }
-.skill__list {
+@media screen and (max-width: 480px) {
+  .skill__category,
+  .contact__category {
+    min-width: 50%;
+  }
+}
+.skill__list,
+.like__list,
+.contact__url {
   flex-direction: row;
   height: auto;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
-.skill__category span {
+.skill__category span,
+.contact__category span {
   background-color: var(--main-bl-color);
   border-radius: 5px;
   margin: 5px;
   padding: 5px;
   color: #000000;
+  height: max-content;
 }
-.skill__list span {
+.skill__list span,
+.like__list span {
   background-color: var(--main-or-color);
   border-radius: 5px;
   margin: 5px;
   padding: 5px;
+}
+.contact__url a {
+  display: block;
+  position: relative;
+  margin: auto 0;
 }
